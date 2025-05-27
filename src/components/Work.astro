@@ -1,0 +1,181 @@
+---
+interface Project {
+	name: string;
+	description: string;
+	link: {
+		url?: string;
+		target?: string;
+		title?: string;
+		buttonLabel?: string;
+	};
+	tags?: string[];
+}
+
+const projects: Project[] = [
+	{
+		name: "webtales-frontend",
+		description:
+			"Frontend for WebTalesMTL, a Go-powered web crawler and content aggregator that extracts and translates Chinese web novels to English, with user history and bookmark tracking. Built with Astro JS for optimal performance.",
+		link: {
+			url: "https://github.com/Kimthean/webtales-frontend",
+			title: "webtales-frontend GitHub Repo",
+			buttonLabel: "GitHub Repo",
+		},
+		tags: ["TypeScript", "Astro", "Go"],
+	},
+	{
+		name: "crawly",
+		description:
+			"A web crawler built with TypeScript for crawling Khmer news text for ai dataset.",
+		link: {
+			url: "https://github.com/Kimthean/crawly",
+			title: "crawly GitHub Repo",
+			buttonLabel: "GitHub Repo",
+		},
+		tags: ["TypeScript", "Web Crawler"],
+	},
+	{
+		name: "Outerbase Studio",
+		description:
+			"Contributed to LibSQL Studio by Outerbase, an open-source database management interface, implementing UI improvements and bug fixes.",
+		link: {
+			url: "https://github.com/outerbase/studio",
+			title: "Outerbase Studio GitHub Repo",
+			buttonLabel: "GitHub Repo",
+		},
+		tags: ["TypeScript", "Open Source"],
+	},
+	{
+		name: "Kafe1",
+		description:
+			"A creator monetization platform built with Next.js and Supabase, integrating Cambodia's Bakong payment system for secure financial support of local content creators.",
+		link: {
+			url: "",
+			title: "Kafe1 GitHub Repo",
+			buttonLabel: "GitHub Repo",
+		},
+		tags: ["TypeScript", "Web App"],
+	},
+];
+---
+
+<section class="mt-8">
+	<h2 class="text-3xl font-bold text-white mb-6">Work Experience</h2>
+	<div class="space-y-8">
+		<div>
+			<h3 class="text-xl font-semibold text-primary">
+				Dreamslab <span class="text-gray-400 text-base font-normal"
+					>| Full Stack Developer | Cambodia | Aug 2023 -
+					Present</span
+				>
+			</h3>
+			<ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+				<li>
+					Engineered a distributed LangChain RAG-based chatbot system
+					with NestJS backend and Next.js frontend, enabling automated
+					customer service across multiple websites.
+				</li>
+				<li>
+					Developed a comprehensive online educational platform using
+					Next.js, implementing responsive interfaces and interactive
+					features for diverse user bases.
+				</li>
+				<li>
+					Built a modular chatbot agent library supporting multiple
+					JavaScript frameworks, improving deployment efficiency and
+					code reusability.
+				</li>
+				<li>
+					Led cross-functional collaboration with design and content
+					teams to integrate educational features and optimize system
+					performance.
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3 class="text-xl font-semibold text-primary">
+				Kafe1 <span class="text-gray-400 text-base font-normal"
+					>| Developer | Cambodia | Oct 2024 - Dec 2024</span
+				>
+			</h3>
+			<ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+				<li>
+					Developed a creator monetization platform with Next.js and
+					Supabase, integrating Cambodia's Bakong payment system to
+					enable secure financial support for local content creators
+					through automated domestic transactions.
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3 class="text-xl font-semibold text-primary">
+				WebtalesMTL <span class="text-gray-400 text-base font-normal"
+					>| Owner | Cambodia | Jul 2024 - Sep 2024</span
+				>
+			</h3>
+			<ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+				<li>
+					Developed WebTalesMTL, a Go-powered web crawler and content
+					aggregator that automatically extracts and translates
+					Chinese web novels to English, featuring concurrent crawling
+					and chapter translation processing along with user history,
+					bookmark tracking.
+				</li>
+				<li>
+					Built responsive frontend with Astro JS, implementing
+					server-side rendering for optimal performance and user
+					experience.
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3 class="text-xl font-semibold text-primary">
+				LibSQL Studio <span class="text-gray-400 text-base font-normal"
+					>| Developer | Cambodia | Apr 2024 - May 2024</span
+				>
+			</h3>
+			<ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+				<li>
+					Contributed to LibSQL Studio by Outerbase, an open-source
+					database management interface, implementing UI improvements
+					and bug fixes to enhance user experience.
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<div class="pt-8">
+	<h2 class="text-3xl font-bold text-white mb-6">Featured Projects</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		{
+			projects.map((project) => (
+				<div class="flex flex-col border border-gray-700 rounded-xl p-6 bg-gradient-to-br from-gray-900 to-black shadow-lg hover:shadow-primary/30 transition-shadow">
+					<h3 class="text-xl font-semibold text-primary mb-2">
+						{project.name}
+					</h3>
+					<p class="text-gray-300 mb-3">{project.description}</p>
+					{project.tags && (
+						<div class="mb-3 flex flex-wrap gap-2">
+							{project.tags.map((tag) => (
+								<span class="bg-gray-800 text-xs text-gray-400 px-2 py-1 rounded">
+									{tag}
+								</span>
+							))}
+						</div>
+					)}
+					{project.link?.url && (
+						<a
+							href={project.link.url}
+							title={project.link.title || project.name}
+							target={project.link.target || "_blank"}
+							class="inline-block px-4 py-2 mt-auto text-sm font-medium text-white bg-primary rounded hover:bg-primary/80 transition"
+						>
+							{project.link.buttonLabel || "Open Project Website"}
+						</a>
+					)}
+				</div>
+			))
+		}
+	</div>
+</div>

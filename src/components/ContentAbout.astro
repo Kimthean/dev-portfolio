@@ -1,0 +1,89 @@
+---
+import { Code } from "astro:components";
+
+const code = `package main
+
+import "fmt"
+
+type Developer struct {
+	Name      string
+	Age       int
+	Skills    []string
+	Interests []string
+}
+
+type TechStack struct {
+	DevOps   []string
+	Backend  []string
+	Frontend []string
+}
+
+func main() {
+	techStack := TechStack{
+		DevOps: []string{
+			"GitHub", "Docker",
+			"Cloudflare", "CI/CD",
+		},
+		Backend: []string{
+			"Go", "Nest.js",
+			"PostgreSQL", "Hono",
+			"REST APIs",
+		},
+		Frontend: []string{
+			"React", "Next.js",
+			"React Router", "TypeScript",
+			"TailwindCSS", "React Native",
+			"Expo", "React Query",
+			"Astro",
+		},
+	}
+
+
+	me := Developer{
+		Name: "Kea Kimthean",
+		Age: 20,
+		Skills: append(
+			append(techStack.DevOps, techStack.Backend...),
+			techStack.Frontend...,
+		),
+		Interests: []string{
+			"Web Development",
+			"Cloud Infrastructure",
+			"Continuous Learning",
+		},
+	}
+
+	fmt.Println("Developer:", me.Name)
+	fmt.Println("Age:", me.Age)
+	fmt.Println("Skills:", me.Skills)
+	fmt.Println("Interests:", me.Interests)
+}
+`;
+---
+
+<Code code={code} lang="go" wrap={false} />
+
+<style is:global>
+	/* Custom styling for code block line numbers */
+	pre.astro-code {
+		@apply bg-transparent !important;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+
+	pre.astro-code code {
+		@apply block;
+		counter-reset: step;
+		counter-increment: step 0;
+	}
+
+	pre.astro-code code .line {
+		@apply relative;
+	}
+
+	pre.astro-code code .line::before {
+		content: counter(step);
+		counter-increment: step;
+		@apply text-gray-600 pr-2;
+	}
+</style>
