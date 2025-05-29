@@ -7,7 +7,7 @@ import compress from "astro-compress";
 export default defineConfig({
 	output: "static",
 	trailingSlash: "always",
-	site: "https://devidev.io",
+	site: "https://www.thean.dev",
 
 
 	prefetch: false,
