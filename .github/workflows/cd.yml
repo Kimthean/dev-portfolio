@@ -3,7 +3,7 @@ name: CD - Docker Build, Push, and Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   push-and-deploy:
