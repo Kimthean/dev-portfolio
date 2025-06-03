@@ -1,0 +1,54 @@
+name: CD - Docker Build, Push, and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8.15.4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Docker Login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Docker Build and Push
+        run: |
+          docker build -t kimthean/dev-portfolio:latest .
+          docker push kimthean/dev-portfolio:latest
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            docker pull kimthean/dev-portfolio:latest
+            docker stop dev-portfolio || true
+            docker rm dev-portfolio || true
+            docker run -d --name dev-portfolio -p 80:80 kimthean/dev-portfolio:latest
