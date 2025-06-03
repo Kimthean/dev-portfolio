@@ -51,4 +51,4 @@ jobs:
             docker pull kimthean/dev-portfolio:latest
             docker stop dev-portfolio || true
             docker rm dev-portfolio || true
-            docker run -d --name dev-portfolio -p 80:80 kimthean/dev-portfolio:latest
+            docker run -d --name dev-portfolio -p 8080:80 kimthean/dev-portfolio:latest
