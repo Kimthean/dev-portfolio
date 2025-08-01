@@ -13,6 +13,17 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "ESP-E-Reader",
+    description:
+      "A comprehensive e-reader firmware for ESP32-based hardware with temperature/humidity monitoring, RTC functionality, and future support for novel and manga reading. Features AHT30 sensor integration, RX8025T real-time clock, SD card storage.",
+    link: {
+      url: "https://github.com/Kimthean/ESP-E-Reader",
+      title: "ESP-E-Reader GitHub Repo",
+      buttonLabel: "GitHub Repo",
+    },
+    tags: ["C++", "ESP32", "IoT", "Hardware", "E-Reader", "Embedded Systems"],
+  },
+  {
     name: "WebTalesMTL",
     description:
       "A complete full-stack web application for crawling and translating Chinese web novels to English. Built with Go backend for concurrent crawling and chapter translation processing, and Astro JS frontend with server-side rendering for optimal performance. Features user history, bookmark tracking, and real-time translation capabilities.",
@@ -70,7 +81,7 @@ const projects: Project[] = [
   <h2 class="text-3xl font-bold text-white mb-6">Education</h2>
   <div>
     <h3 class="text-xl font-semibold text-primary">
-      Bachelors of Science in Information Technology (Year 3)
+      Bachelors of Science in Information Technology
       <span class="text-gray-400 text-base font-normal">
         | University of Cambodia, Phnom Penh, Cambodia | 50% Scholarship
       </span>
@@ -84,97 +95,124 @@ const projects: Project[] = [
   <div class="space-y-8">
     <div>
       <h3 class="text-xl font-semibold text-primary">
-        Software Engineer <span class="text-gray-400 text-base font-normal"
-          >| Dreamslab, Cambodia | Mar 2025 - Present</span
+        Freelance Full Stack Developer <span
+          class="text-gray-400 text-base font-normal"
+          >| Remote | May 2025 - Present</span
         >
       </h3>
       <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
         <li>
-          Developed DreamsPay, a Bakong payment gateway processing secure
-          transactions with KHQR code generation and real-time processing for
-          Khamsa Group subsidiaries.
+          Designing and building a modular CMS/AMS/DMS system for a government
+          agency using a microservice architecture
         </li>
         <li>
-          Engineered Ajium, a blockchain-based loyalty platform on Telegram mini
-          app using Next.js frontend and Hono backend, enabling seamless
-          token-based rewards for users.
+          Developed multiple backend microservices using NestJS with centralized
+          auth, logging, and RBAC
         </li>
         <li>
-          Implemented responsive interfaces and optimized API endpoints for
-          improved performance and user experience across multiple platforms.
+          Built a performant frontend with TanStack Router and React, enabling
+          document workflows and dynamic views
+        </li>
+        <li>
+          Integrated secure document handling, versioning, role-based
+          permissions, and approval flows
+        </li>
+        <li>
+          Orchestrated service communication with message queues and REST APIs
+          for scalable deployment
         </li>
       </ul>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-primary">
-        Junior Software Engineer <span
+        Full Stack Developer <span class="text-gray-400 text-base font-normal"
+          >| Dreamslab, Cambodia | Mar 2025 - Jul 2025</span
+        >
+      </h3>
+      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        <li>
+          Developed DreamsPay, a secure Bakong payment gateway with KHQR code
+          generation, enabling real-time transactions for Khamsa Group
+          subsidiaries
+        </li>
+        <li>
+          Engineered Ajium, a blockchain-based loyalty platform on Telegram mini
+          app, leveraging Next.js and Hono for seamless token rewards
+        </li>
+        <li>
+          Integrated React Router, NestJS, and SSE to optimize user flows and
+          real-time data delivery, enhancing platform responsiveness
+        </li>
+        <li>
+          Implemented Swagger for robust API documentation, streamlining backend
+          integration
+        </li>
+        <li>
+          Utilized Tailwind and TON to deliver scalable, maintainable UI
+          components, improving development velocity
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold text-primary">
+        Junior Fullstack Developer <span
           class="text-gray-400 text-base font-normal"
           >| Dreamslab, Cambodia | Aug 2023 - Mar 2025</span
         >
       </h3>
       <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
         <li>
-          Engineered a distributed LangChain RAG-based chatbot system with
-          NestJS backend and Next.js frontend, enabling automated customer
-          service across multiple websites.
+          Engineered a modular LangChain RAG-based chatbot for customer support
+          with GPT and embedding search using NestJS backend and Next.js
+          frontend
         </li>
         <li>
-          Built a modular chatbot agent library supporting multiple JavaScript
-          frameworks, improving deployment efficiency and code reusability.
+          Developed a reusable chatbot agent library supporting multiple JS
+          frameworks with WebSocket integration and SolidJS-based modular chat
+          bubble components, improving portability
         </li>
         <li>
-          Developed a comprehensive online educational platform using Next.js,
-          implementing responsive interfaces and interactive features for
-          diverse user bases.
+          Built an interactive online education platform with responsive UX
+          using Next.js
         </li>
       </ul>
     </div>
     <h2 class="text-3xl font-bold text-white mb-6">Relevant Experience</h2>
     <div>
       <h3 class="text-xl font-semibold text-primary">
-        Kafe1 <span class="text-gray-400 text-base font-normal"
-          >| Developer | Cambodia | Oct 2024 - Dec 2024</span
+        Founder & Developer <span class="text-gray-400 text-base font-normal"
+          >| WebTalesMTL, Cambodia | Jul 2024 - Sep 2024</span
         >
       </h3>
       <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
         <li>
-          Developed a creator monetization platform with Next.js and Supabase,
-          integrating Cambodia's Bakong payment system to enable secure
-          financial support for local content creators through automated
-          domestic transactions.
+          Built a web crawler and translation engine in Go that scrapes and
+          auto-translates Chinese web novels to English
+        </li>
+        <li>
+          Developed responsive UI in AstroJS with server-side rendering for
+          smooth UX
+        </li>
+        <li>
+          Added features like bookmark tracking, chapter history, and user
+          preferences
         </li>
       </ul>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-primary">
-        WebtalesMTL <span class="text-gray-400 text-base font-normal"
-          >| Owner | Cambodia | Jul 2024 - Sep 2024</span
+        Open Source Contributor <span
+          class="text-gray-400 text-base font-normal"
+          >| LibSQL Studio (Outerbase OSS) | Apr 2024 - May 2024</span
         >
       </h3>
       <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
         <li>
-          Developed WebTalesMTL, a Go-powered web crawler and content aggregator
-          that automatically extracts and translates Chinese web novels to
-          English, featuring concurrent crawling and chapter translation
-          processing along with user history, bookmark tracking.
+          Improved UI elements and resolved bugs in the LibSQL database
+          management interface
         </li>
         <li>
-          Built responsive frontend with Astro JS, implementing server-side
-          rendering for optimal performance and user experience.
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="text-xl font-semibold text-primary">
-        LibSQL Studio <span class="text-gray-400 text-base font-normal"
-          >| Developer | Cambodia | Apr 2024 - May 2024</span
-        >
-      </h3>
-      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-        <li>
-          Contributed to LibSQL Studio by Outerbase, an open-source database
-          management interface, implementing UI improvements and bug fixes to
-          enhance user experience.
+          Focused on polish, accessibility, and developer productivity features
         </li>
       </ul>
     </div>
