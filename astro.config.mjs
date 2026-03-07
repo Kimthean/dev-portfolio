@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
@@ -9,10 +10,10 @@ export default defineConfig({
 	trailingSlash: "always",
 	site: "https://www.thean.dev",
 
-
 	prefetch: false,
 
 	integrations: [
+		react(),
 		tailwind(),
 		sitemap(),
 		compress({

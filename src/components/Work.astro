@@ -13,6 +13,17 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "ICE KH Mobile App",
+    description:
+      "Rebuilt e-commerce mobile application for ICE Electronics with React Native and Expo. Features real-time product catalog, cart management, order tracking, and seamless shopping experience for customers.",
+    link: {
+      url: "https://play.google.com/store/apps/details?id=com.icekh.ice&hl=en",
+      title: "ICE KH Mobile App on Google Play",
+      buttonLabel: "View on Play Store",
+    },
+    tags: ["React Native", "Expo", "TypeScript", "Mobile", "E-Commerce"],
+  },
+  {
     name: "ESP-E-Reader",
     description:
       "A comprehensive e-reader firmware for ESP32-based hardware with temperature/humidity monitoring, RTC functionality, and future support for novel and manga reading. Features AHT30 sensor integration, RX8025T real-time clock, SD card storage.",
@@ -95,31 +106,47 @@ const projects: Project[] = [
   <div class="space-y-8">
     <div>
       <h3 class="text-xl font-semibold text-primary">
-        Freelance Full Stack Developer <span
+        Mid-Level Fullstack Developer <span
           class="text-gray-400 text-base font-normal"
-          >| Remote | May 2025 - Present</span
+          >| ICE Electronics Co., Ltd | Sep 2025 - Present</span
         >
       </h3>
       <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
         <li>
-          Designing and building a modular CMS/AMS/DMS system for a government
-          agency using a microservice architecture
+          Rebuilt ICE KH mobile app using React Native with real-time product catalog and order management
         </li>
         <li>
-          Developed multiple backend microservices using NestJS with centralized
-          auth, logging, and RBAC
+          Building enterprise-grade applications using microservices architecture with NestJS and microfrontend patterns
         </li>
         <li>
-          Built a performant frontend with TanStack Router and React, enabling
-          document workflows and dynamic views
+          Implementing Module Federation for scalable frontend architecture and complex state management with Kysely
         </li>
         <li>
-          Integrated secure document handling, versioning, role-based
-          permissions, and approval flows
+          Developing ERP solutions with focus on modularity, performance, and maintainability
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold text-primary">
+        Full Stack Developer <span class="text-gray-400 text-base font-normal"
+          >| Freelance, Remote | May 2025 - Jan 2026</span
+        >
+      </h3>
+      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        <li>
+          Building a modular CMS/AMS/DMS system for a government agency using a microservice architecture
         </li>
         <li>
-          Orchestrated service communication with message queues and REST APIs
-          for scalable deployment
+          Developed multiple backend microservices using NestJS with centralized auth, logging, and RBAC
+        </li>
+        <li>
+          Built a performant frontend with TanStack Router and React, enabling document workflows and dynamic views
+        </li>
+        <li>
+          Integrated secure document handling, versioning, role-based permissions, and approval flows
+        </li>
+        <li>
+          Orchestrated service communication REST APIs for scalable deployment
         </li>
       </ul>
     </div>
@@ -131,25 +158,13 @@ const projects: Project[] = [
       </h3>
       <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
         <li>
-          Developed DreamsPay, a secure Bakong payment gateway with KHQR code
-          generation, enabling real-time transactions for Khamsa Group
-          subsidiaries
+          Developed DreamsPay, a secure Bakong payment gateway with KHQR code generation, enabling real-time transactions
         </li>
         <li>
-          Engineered Ajium, a blockchain-based loyalty platform on Telegram mini
-          app, leveraging Next.js and Hono for seamless token rewards
+          Engineered Ajium, a blockchain-based loyalty platform on Telegram mini app using Next.js and Hono
         </li>
         <li>
-          Integrated React Router, NestJS, and SSE to optimize user flows and
-          real-time data delivery, enhancing platform responsiveness
-        </li>
-        <li>
-          Implemented Swagger for robust API documentation, streamlining backend
-          integration
-        </li>
-        <li>
-          Utilized Tailwind and TON to deliver scalable, maintainable UI
-          components, improving development velocity
+          Integrated NestJS, React Router, and SSE for real-time data delivery and optimized user flows
         </li>
       </ul>
     </div>
@@ -162,57 +177,10 @@ const projects: Project[] = [
       </h3>
       <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
         <li>
-          Engineered a modular LangChain RAG-based chatbot for customer support
-          with GPT and embedding search using NestJS backend and Next.js
-          frontend
+          Built modular LangChain RAG-based chatbot for customer support with NestJS backend and Next.js frontend
         </li>
         <li>
-          Developed a reusable chatbot agent library supporting multiple JS
-          frameworks with WebSocket integration and SolidJS-based modular chat
-          bubble components, improving portability
-        </li>
-        <li>
-          Built an interactive online education platform with responsive UX
-          using Next.js
-        </li>
-      </ul>
-    </div>
-    <h2 class="text-3xl font-bold text-white mb-6">Relevant Experience</h2>
-    <div>
-      <h3 class="text-xl font-semibold text-primary">
-        Founder & Developer <span class="text-gray-400 text-base font-normal"
-          >| WebTalesMTL, Cambodia | Jul 2024 - Sep 2024</span
-        >
-      </h3>
-      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-        <li>
-          Built a web crawler and translation engine in Go that scrapes and
-          auto-translates Chinese web novels to English
-        </li>
-        <li>
-          Developed responsive UI in AstroJS with server-side rendering for
-          smooth UX
-        </li>
-        <li>
-          Added features like bookmark tracking, chapter history, and user
-          preferences
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="text-xl font-semibold text-primary">
-        Open Source Contributor <span
-          class="text-gray-400 text-base font-normal"
-          >| LibSQL Studio (Outerbase OSS) | Apr 2024 - May 2024</span
-        >
-      </h3>
-      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-        <li>
-          Improved UI elements and resolved bugs in the LibSQL database
-          management interface
-        </li>
-        <li>
-          Focused on polish, accessibility, and developer productivity features
+          Developed reusable chatbot agent library supporting multiple JS frameworks with WebSocket and SolidJS components
         </li>
       </ul>
     </div>
